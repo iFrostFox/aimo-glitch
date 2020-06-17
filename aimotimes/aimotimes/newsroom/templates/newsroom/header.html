@@ -1,0 +1,46 @@
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
+    <!-- Prism CSS -->
+    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{% static 'files/css.txt' %}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="{% static 'files/js.txt' %}"></script>
+</head>
+
+
+<body>
+
+<div class="navbar-fixed">
+  <nav>
+      <div class="nav-wrapper  teal lighten-1">
+        <a href="#!" class="brand-logo">Ai-Mo Times</a>
+        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/newsroom">Newsroom</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <ul class="sidenav" id="mobile">
+    <li><a href="/">Home</a></li>
+    <li><a href="/newsroom">Newsroom</a></li>
+  </ul>
+
+<script language="javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+</script>
+<body>  
+  {% block content %}
+  {% endblock %}
+</body>
+
+<!-- Prism JS -->
+<script src="{% static "tinymce/js/prism.js" %}"></script>

@@ -1,0 +1,21 @@
+{% extends 'newsroom/header.html' %}
+
+{% block content %}
+  <div class="row">
+    {% for n in all_newspapers %}
+      <div class="col s12 m4">
+        <div class="card small grey lighten-5 hoverable">
+          <div class="card-content black-text">
+            <span class="card-title">{{n.title}}</span>
+            <p style="font-size:70%">Published {{n.date_published}}</p>
+            <p style="font-size:70%">Authors: {{n.authors}}</p>
+          </div>
+          <div class="card-action">
+            <a href="newspaper/{{n.slug}}">Read Newspaper</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}
+
