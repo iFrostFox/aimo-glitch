@@ -25,9 +25,10 @@ SECRET_KEY = '4e^^$u4*7=%^0jv7hgm8ph#dk4l8^qm(l+o&0w04wl%e+tptb!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+#SECURE_SSL_REDIRECT = True
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 ALLOWED_HOSTS = ['ai-mo-times.glitch.me']
-
-
 # Application definition
 
 INSTALLED_APPS = [
